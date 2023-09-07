@@ -2,13 +2,11 @@ const http = require('http');
 const port = 3000;
 
 const server = http.createServer((req, res) => {
-    res.write("Javascript");
-    res.end();
+    res.end("Javascript");
 });
 
-server.listen(port, (err) => {
-    if (err) console.log("there was an error: ", err);
-    else console.log("server is running on http://localhost:" + port);
+server.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
 
-//node app.js
+//command to run: node app.js
